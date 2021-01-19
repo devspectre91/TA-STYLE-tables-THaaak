@@ -4,217 +4,485 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
 
-:root{
-    --myorange:#ED563A;
-    --lighttext:#aaaaaa;
-    --myblue:#3380e6;
+:root {
+    --myorange: #ED563A;
+    --lighttext: #aaaaaa;
+    --myblue: #3380e6;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
     line-height: 1;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /* General styling and classes -------------------------------------------------------------*/
 
-  
-*, *:after, *:before{
+
+*,
+*:after,
+*:before {
     box-sizing: border-box;
 }
 
-body{
+body {
     line-height: 1.5;
 }
-a{
+
+a {
     text-decoration: none;
-    font-size: 14px;
+    font-size: 10px;
+    color: white;
+    letter-spacing: 1;
 
 }
 
-.container{
+.text-center {
+    text-align: center;
+}
+
+.container {
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
 }
 
 /* flex classes ==============================================*/
-.flex-r{
+.flex-r {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.flex-start{
+
+.flex-c {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+.flex-65 {
+    flex: 0 1 65%;
+}
+
+.flex-20 {
+    flex: 0 1 20%;
+}
+
+.flex-75 {
+    flex: 0 1 75%;
+}
+
+.flex-card {
+    align-items: flex-start;
+}
+
+.flex-start {
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-.flex-center{
+.flex-center {
     justify-content: center;
 }
 
-.flex-50{
-    flex: 0 1 50%;
-}
-
-.flex-30{
-    flex:0 1 30%;
-}
-
-
-.flex-c{
-    display: flex;
-    flex-direction: column;
-    justify-content:space-between;
-    align-items: center;
-}
-
-.btn-primary{
-    display:inline-block;
-    padding: 10px;
+.btn-primary {
+    display: inline-block;
+    padding: 10px 15px;
     text-transform: uppercase;
     font-size: 10px;
+    color: white;
     font-weight: lighter;
     letter-spacing: 0.98;
     text-align: center;
     background-color: var(--myorange);
 
 }
-.btn-bold{
+
+
+.btn-primary a {
+    font-size: 10px;
+    letter-spacing: 0.9px;
+}
+
+.btn-bold {
     font-weight: 700;
     font-size: 16px;
 }
 
-.orange-bg{
-   background-color: var(--myorange);
+.uppercase {
+    text-transform: uppercase;
 }
 
-.orange-text{
-    color:var(--myorange);
-}
-.blue-text{
-    color:#3380e6;
+.orange-bg {
+    background-color: var(--myorange);
 }
 
-.margin-5{
+.orange-text {
+    color: var(--myorange);
+}
+
+.blue-text {
+    color: #3380e6;
+}
+
+.margin-5 {
     margin-left: 5px;
 }
-.margin-30{
+
+.margin-30 {
     margin-left: 30px;
 }
-.margin-l{
+
+.margin-l {
     margin-left: 20px;
 }
 
-.padding-20{
+.padding-20 {
     padding: 20px;
 }
+
+.text-common {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 5px 0;
+    color: white;
+    font-weight: 900;
+}
+
+.active {
+    color: var(--myorange);
+}
+
 /* styling header ---------------------------------------------------------*/
 
-header{
-   
+header {
+
     background-image: linear-gradient(to right, rgba(53, 53, 53, 0.5), rgba(53, 53, 53, 0.5));
-   
+
     width: 100%;
-    height: 100vh;
+    height: 116vh;
     position: relative;
-   
+
 }
+
 /* styling navbar =======*/
-.navbar{
-    background-image: linear-gradient(to right, rgba(153, 151, 151, 0.2),rgba(153, 151, 151, 0.2));
+.navbar {
+    background-image: linear-gradient(to right, rgba(153, 151, 151, 0.2), rgba(153, 151, 151, 0.2));
     margin: 0;
     padding: 10px 0;
-   
+
 }
-nav a{
+
+nav a {
     color: white;
     text-transform: uppercase;
     font-weight: 400;
     font-size: 10px;
+    letter-spacing: 0.9px;
 }
-.brand-icon a{
+
+nav a:hover {
+    color: var(--myorange);
+}
+
+.brand-icon a {
     color: white;
     font-size: 22px;
-    font-weight:800;
+    font-weight: 800;
     text-transform: uppercase;
 }
-#myvideo{
+
+.video-container {
     position: absolute;
     top: 0;
     left: 0;
-  
-   
+    z-index: -1;
+
 }
 
-.video-container{
-     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.video-container video {
+    width: 100%;
+
 }
-.video-container video{
+
+/* styling hero section */
+.hero {
+    padding: 250px 0;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: 900;
+}
+
+/* styling main --------------------------------*/
+
+/* styling program section */
+
+.program {
+    padding: 80px 0;
+}
+
+.program-header {
+    text-align: center;
+
+}
+
+h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.program-header img {
+    margin: 15px 0;
+}
+
+.program-header p {
+    color: var(--lighttext);
+    font-size: 12px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card-container {
+    margin: 60px 0;
+}
+
+.card {
+    margin-bottom: 40px;
+}
+
+.card img {
+    width: 70px;
+}
+
+.card h6 {
+    font-weight: 800;
+
+}
+
+.card p {
+    color: var(--lighttext);
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* styling members */
+
+.member {
+    background-image: url(../cta-bg.jpg);
+    padding: 40px 0;
+}
+
+.member h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 1px;
+
+}
+
+.member p {
+    color: rgb(240, 222, 222);
+    font-size: 12px;
+    margin: 10px auto;
+    width: 70%;
+}
+
+/* styling classes */
+
+.btn-secondary {
+    padding: 15px 10px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5px 0px rgb(228, 226, 226);
     width: 100%;
 }
 
+.btn-secondary img {
+    width: 25px;
+}
 
+.btn-secondary a {
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: black;
 
+}
 
+.btn-schedule {
+    background-color: var(--myorange);
+    border-radius: 5px;
 
+}
 
+.btn-schedule a {
+    text-transform: capitalize;
+    color: white;
+}
 
+.btn-secondary a:hover {
+    color: var(--myorange);
+}
 
+.btn-secondary .active {
+    color: var(--myorange);
+}
 
+.class-description img {
+    width: 500px;
+}
 
+.class-description h5 {
+    text-transform: capitalize;
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 10px;
 
+}
 
+.class-description p {
+    font-size: 10px;
+    color: var(--lighttext);
+    margin: 10px 0;
+}
 
-
-
-
-
-
-
-
-
-
-
+.class-description .btn-primary {
+    font-size: 10px;
+}
