@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
 
 :root {
-    --myorange: #ED563A;
+    --myorange: #e75238;
     --lighttext: #aaaaaa;
     --myblue: #3380e6;
 }
@@ -203,6 +203,10 @@ a {
     flex: 0 1 20%;
 }
 
+.flex-50 {
+    flex: 0 1 50%;
+}
+
 .flex-75 {
     flex: 0 1 75%;
 }
@@ -221,12 +225,13 @@ a {
 }
 
 .btn-primary {
+    transition: background-color 200ms ease-in-out;
     display: inline-block;
     padding: 10px 15px;
     text-transform: uppercase;
     font-size: 10px;
     color: white;
-    font-weight: lighter;
+    font-weight: normal;
     letter-spacing: 0.98;
     text-align: center;
     background-color: var(--myorange);
@@ -237,6 +242,11 @@ a {
 .btn-primary a {
     font-size: 10px;
     letter-spacing: 0.9px;
+}
+
+.btn-primary:hover {
+    background-color: #e75238d3;
+
 }
 
 .btn-bold {
@@ -260,12 +270,20 @@ a {
     color: #3380e6;
 }
 
+.font-10 {
+    font-size: 12px;
+}
+
 .margin-5 {
     margin-left: 5px;
 }
 
 .margin-30 {
     margin-left: 30px;
+}
+
+.margin-10 {
+    margin-left: 10px;
 }
 
 .margin-l {
@@ -318,6 +336,10 @@ nav a {
 
 nav a:hover {
     color: var(--myorange);
+}
+
+.sign-up:hover {
+    color: white;
 }
 
 .brand-icon a {
@@ -403,6 +425,10 @@ h4 {
     margin: 5px 0;
 }
 
+.card a:hover {
+    text-decoration: underline;
+}
+
 /* styling members */
 
 .member {
@@ -449,6 +475,12 @@ h4 {
 .btn-schedule {
     background-color: var(--myorange);
     border-radius: 5px;
+    transition: background-color 200ms ease-in-out;
+
+}
+
+.btn-schedule:hover {
+    background-color: #e75238d3;
 
 }
 
@@ -457,8 +489,14 @@ h4 {
     color: white;
 }
 
+
 .btn-secondary a:hover {
     color: var(--myorange);
+}
+
+.btn-schedule a:hover {
+
+    color: white;
 }
 
 .btn-secondary .active {
@@ -485,4 +523,162 @@ h4 {
 
 .class-description .btn-primary {
     font-size: 10px;
+}
+
+
+
+/* styling the schedule section */
+
+
+.schedule {
+    background-image: url(../schedule-bg.jpg);
+    padding: 90px 0;
+    border-collapse: collapse;
+}
+
+.schedule img {
+    margin: 20px 0;
+}
+
+.table-container {
+    padding: 100px 0;
+}
+
+.table-container table {
+    border: 1px solid white;
+}
+
+.table-container caption {
+    margin-bottom: 30px;
+    color: white;
+}
+
+.table-container caption a {
+    text-transform: capitalize;
+    margin-right: 3px;
+    margin-left: 5px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.table-container td {
+    border: 1px solid white;
+    color: white;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 25px 40px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+
+/* styling trainer section */
+
+.trainer {
+    padding: 40px 0;
+
+}
+
+.trainer-card-container {
+    margin-top: 50px;
+}
+
+.trainer-card {
+    padding: 25px;
+    box-shadow: 0px 0px 5px 0px rgb(228, 226, 226);
+}
+
+.trainer-card img {
+    width: 200px;
+}
+
+.trainer-card h6 {
+    font-size: 10px;
+    text-transform: capitalize;
+    margin: 10px 0;
+
+}
+
+.trainer-card span {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.trainer-card p {
+    margin: 10px 0;
+    font-size: 12px;
+    color: var(--lighttext);
+}
+
+.trainer-card .social-links .active {
+    color: var(--myorange);
+
+}
+
+.trainer-card .social-links a {
+    color: black;
+}
+
+.trainer-card .social-links a:hover {
+    color: var(--myorange);
+}
+
+
+/* styling contact section */
+
+.contact {
+    padding: 30px 0;
+}
+
+.form-map iframe {
+    display: block;
+}
+
+.form-map .form-img {
+    height: 380px;
+    padding: 50px 40px;
+    background-image: url(../contact-bg.jpg);
+}
+
+.contact form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.contact .form-control {
+    display: block;
+    padding: 8px;
+    border: 1px solid rgb(240, 239, 239);
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact .form-control::placeholder {
+    font-size: 10px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
+.contact .btn-primary {
+    outline: 0;
+    border: 0;
+    display: block;
+    width: 20%;
+}
+
+
+/* styling footer */
+
+footer {
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 10px;
+    letter-spacing: 0.4px;
+
 }
